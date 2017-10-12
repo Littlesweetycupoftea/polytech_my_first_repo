@@ -1,0 +1,10 @@
+JMP SLIVA
+DB 5
+SLIVA:
+MOV A,5
+MOV B,A
+something:
+DEC B
+MUL B
+CMP B,1
+JNE something
