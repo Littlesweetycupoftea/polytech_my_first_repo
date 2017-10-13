@@ -1,0 +1,23 @@
+JMP salsa
+hb: DB "01/07"
+DB 0
+salsa: 
+MOV C, hb 
+MOV D, 232
+CALL nothing 
+HLT 
+
+nothing: 
+PUSH A 
+PUSH B 
+MOV B, 0 
+jjj: 
+MOV A, [C] 
+MOV [D], A 
+INC C 
+INC D 
+CMP B, [C] 
+JNZ jjj 
+POP B 
+POP A 
+RET
